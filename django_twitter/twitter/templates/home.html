@@ -6,6 +6,15 @@
 	<title>Tweeter - Feaux</title>
 </head>
 <body>
-	<h1> Twitter Home! </h1>
+	<h1> Twitter Homepage </h1>
+
+	{% for tweet in tweets%}
+		<h2> {{tweet.title}} </h2>
+		<p> {{tweet.author}}</p>
+		<p> {{tweet.content}}</p>
+
+		<p> {{tweet.date_posted}}</p>
+
+	{% endfor %}
 </body>
 </html>

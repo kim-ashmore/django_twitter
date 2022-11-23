@@ -1,10 +1,25 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from datetime import datetime as dt
 
+tweets = [{
+	'author': 'Kim A',
+	'title': 'tweet 1',
+	'content': 'Blah blah blah',
+	'date_posted': 'date'
+	},
+	{	
+	'author': 'Kim B',
+	'title': 'tweet 2',
+	'content': " I got two versions. twooo versions.",
+	'date_posted': 'date'
+	}]
 
 def home(request):
-	return render(request, 'home.html')
-	# return HttpResponse('<h1> Twitter Home </h1>')
+	context = {
+	'tweets': tweets
+	}
+	return render(request, 'home.html', context)
 
 def about(request):
-	return HttpResponse('<h1> About Feaux Twitter </h1')
+	return render(request, 'about.html')
