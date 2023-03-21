@@ -6,8 +6,7 @@ tweets = [{
 	'author': 'Kim A',
 	'title': 'tweet 1',
 	'content': 'Blah blah blah',
-	'date_posted': dt.now()
-	},
+	'date_posted': dt.now()},
 	{	
 	'author': 'Kim B',
 	'title': 'tweet 2',
